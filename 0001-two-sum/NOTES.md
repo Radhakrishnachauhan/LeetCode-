@@ -1,0 +1,1 @@
+we use hashmap for O(N) complexity and space due it follow single line
