@@ -18,21 +18,16 @@ public class Solution {
             slow=slow.next;
             fast=fast.next.next;
 
-            if(slow==fast){
-                cycle= true;
-                break;
-            }  
-        }   
-
-            if(!cycle)
-            return null;
-
-         ListNode entry=head;
-         while(entry!=slow){
-            entry=entry.next;
+        if(slow==fast){
+        slow=head;
+         while(slow!=fast){
             slow=slow.next;
+            fast=fast.next;
          }
-         return entry;
+         return slow;
+       }
+     }
+     return null;
     }
 }
 
